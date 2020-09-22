@@ -15,6 +15,5 @@ node('master') {
         echo "Container ID is ==> ${containerID}"
         sh "docker cp ${containerID}:/TestResults/test_results.xml test_results.xml"
         sh "docker stop ${containerID}"
-        sh "docker rm ${containerID}"
-        
+        sh "docker rm ${containerID}"        
 }
